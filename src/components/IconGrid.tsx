@@ -11,7 +11,7 @@ interface IconGridProps {
 export const IconGrid: React.FC<IconGridProps> = () => {
   const { filteredIcons: iconsToDisplay, selectedStyle, searchQuery, loading } = useIconLibrary();
   const [selectedIcon, setSelectedIcon] = useState<Icon | null>(null);
-  const [selectedIconStyle, setSelectedIconStyle] = useState<IconStyle | null>(null);
+  const [setSelectedIconStyle] = useState<IconStyle | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Use categoryIcons if provided, otherwise use filteredIcons from context

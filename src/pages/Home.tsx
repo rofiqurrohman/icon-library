@@ -1,6 +1,5 @@
 import React from 'react';
 import { IconGrid } from '@/components/IconGrid';
-import { useIconLibrary } from '@/contexts/IconLibraryContext';
 
 export const Home: React.FC = () => {
   return (
