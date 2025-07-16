@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { IconCard } from './IconCard';
 import { IconModal } from './IconModal';
 import { useIconLibrary } from '@/contexts/IconLibraryContext';
-import { Icon, IconStyle } from '@/types/icon';
+import { Icon } from '@/types/icon';
 
 interface IconGridProps {
   categoryIcons?: Icon[];
@@ -11,7 +11,7 @@ interface IconGridProps {
 export const IconGrid: React.FC<IconGridProps> = () => {
   const { filteredIcons: iconsToDisplay, selectedStyle, searchQuery, loading } = useIconLibrary();
   const [selectedIcon, setSelectedIcon] = useState<Icon | null>(null);
-  const [setSelectedIconStyle] = useState<IconStyle | null>(null);
+  // const [setSelectedIconStyle] = useState<IconStyle | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Use categoryIcons if provided, otherwise use filteredIcons from context
@@ -26,7 +26,7 @@ export const IconGrid: React.FC<IconGridProps> = () => {
   const handleModalClose = () => {
     setIsModalOpen(false);
     setSelectedIcon(null);
-    setSelectedIconStyle(null);
+    // setSelectedIconStyle(null);
   };
 
   if (loading) {
