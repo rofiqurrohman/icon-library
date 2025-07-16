@@ -3,8 +3,6 @@ import { IconGrid } from '@/components/IconGrid';
 import { useIconLibrary } from '@/contexts/IconLibraryContext';
 
 export const Home: React.FC = () => {
-  const { filteredIcons, icons, loading } = useIconLibrary();
-
   return (
     <div className='container mx-auto px-4 py-8'>
       <div className='space-y-12'>
