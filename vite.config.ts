@@ -10,18 +10,18 @@ export default defineConfig({
     },
   },
   optimizeDeps: {},
-  server: {
-    proxy: {
-      '/api/icon/solid': {
-        target: 'https://gitfront.io/r/bagasnur/Tir8ug6S5ZtN/icon-font/raw/solid/icon-font-solid.json',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api\/icon\/solid/, ''),
-      },
-      '/api/icon/line': {
-        target: 'https://gitfront.io/r/bagasnur/Tir8ug6S5ZtN/icon-font/raw/line/icon-font-line.json',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api\/icon\/line/, ''),
-      },
-    },
-  },
+  // server: {
+  //   proxy: {
+  //     '/api/icon/solid': {
+  //       target: 'https://gitfront.io/r/bagasnur/Tir8ug6S5ZtN/icon-font/raw/solid/icon-font-solid.json',
+  //       changeOrigin: true,
+  //       rewrite: (path) => path.replace(/^\/api\/icon\/solid/, ''),
+  //     },
+  //     '/api/icon/line': {
+  //       target: 'https://gitfront.io/r/bagasnur/Tir8ug6S5ZtN/icon-font/raw/line/icon-font-line.json',
+  //       changeOrigin: true,
+  //       rewrite: (path) => path.replace(/^\/api\/icon\/line/, ''),
+  //     },
+  //   },
+  // },
 });

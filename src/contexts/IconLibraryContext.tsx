@@ -24,7 +24,7 @@ export const IconLibraryProvider: React.FC<IconLibraryProviderProps> = ({ childr
   useEffect(() => {
     // console.log('selected style', selectedStyle);
     setLoading(true);
-    fetch(`api/icon/${selectedStyle}`)
+    fetch(`/data/icon-font-${selectedStyle}.json`)
       .then((res) => res.json())
       .then((data) => {
         const result = Object.entries(data).map(([name, code]) => {
